@@ -1,0 +1,26 @@
+{
+  "variables": {
+  },
+  "builders": [
+    {
+      "type": "googlecompute",
+      "account_file": "{{user `key_path`}}",
+      "project_id": "{{user `project_id`}}",
+      "source_image": "ubuntu-1804-bionic-v20200529",
+      "ssh_username": "root",
+      "zone": "us-west1-b",
+      "disk_size": 30,
+      "image_name": "airflow-server",
+      "state_timeout": "10m",
+      "machine_type": "n1-standard-1"
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "shell",
+      "environment_vars": [
+      ],
+      "script": "{{user `script_path`}}"
+    }
+  ]
+}
