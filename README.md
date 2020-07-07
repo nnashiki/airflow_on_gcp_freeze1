@@ -1,0 +1,2 @@
+# airflow_on_gcp_freeze1
+airflow_on_gcp を外に出して更新しないやつ
